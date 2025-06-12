@@ -1,14 +1,20 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "target": "ESNext",
+    "module": "CommonJS",
+    "lib": ["ESNext", "DOM"],
     "strict": true,
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["node", "playwright"]
   },
-  "include": ["src/**/*.ts", "playwright/.auth/*.json"],
+  "include": [
+    "playwright.config.ts",
+    "tests/**/*.ts",
+    "page-objects/**/*.ts",
+    "playwright/.auth/*.json"
+  ],
   "exclude": ["dist"]
 }
